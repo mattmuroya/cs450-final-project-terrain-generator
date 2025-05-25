@@ -1,0 +1,6 @@
+
+ERROR: 0:118: 'vHeight' : undeclared identifier 
+ERROR: 0:118: '' : compilation terminated 
+ERROR: 2 compilation errors.  No code generated.
+
+

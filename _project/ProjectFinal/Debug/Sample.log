@@ -1,0 +1,6 @@
+﻿  projFinal_muroyam.cpp
+C:\Users\matt\GitHub\osu\cs450\projects\projectFinal\ProjectFinal\projFinal_muroyam.cpp(117,31): warning C4305: 'initializing': truncation from 'double' to 'const GLfloat'
+C:\Users\matt\GitHub\osu\cs450\projects\projectFinal\ProjectFinal\projFinal_muroyam.cpp(117,37): warning C4305: 'initializing': truncation from 'double' to 'const GLfloat'
+C:\Users\matt\GitHub\osu\cs450\projects\projectFinal\ProjectFinal\projFinal_muroyam.cpp(117,43): warning C4305: 'initializing': truncation from 'double' to 'const GLfloat'
+projFinal_muroyam.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+  Sample.vcxproj -> C:\Users\matt\GitHub\osu\cs450\projects\projectFinal\ProjectFinal\Debug\Sample.exe
