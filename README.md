@@ -2,44 +2,42 @@
 
 This report details the design and development of my final project, a
 procedurally generated infinite-scrolling 3D terrain simulation inspired by
-[this demonstration by The Coding Train on YouTube](https://www.youtube.com/watch?v=IKB1hWWedMk).
+[this demo from The Coding Train on YouTube](https://www.youtube.com/watch?v=IKB1hWWedMk).
+
+## Video demo
+
+See a video demo:
+[https://media.oregonstate.edu/media/1_ezhu1ccz](https://media.oregonstate.edu/media/1_ezhu1ccz)
+
+## Project overview
+
+The scene consists of a single triangle grid. The application turns the grid
+into a 3D terrain mesh by transforming each vertex's y-height according to a
+deterministic 2D Perlin noise algorithm. The noise algorithm produces a height
+map in real time that can be shifted across the mesh, producing an
+infinite-scrolling "terrain flyover" effect. I was also able to add several
+rendering/color themes to alter the final appearance of the mesh.
+
+This section details how I addressed each implementation concern from the
+proposal, and how my actual approach differed from my expected approach.
 
 <p float="left">
     <img
         src="images/3d-terrain-generator-color.png"
-        width="400"
+        width="600"
     />
 </p>
 
 <p float="left">
     <img
         src="images/3d-terrain-generator-wire.png"
-        width="200"
+        width="300"
     />
     <img
         src="images/3d-terrain-generator-solid.png"
-        width="200"
+        width="300"
     />
 </p>
-
-## Video
-
-See a video demo:
-[https://media.oregonstate.edu/media/1_ezhu1ccz](https://media.oregonstate.edu/media/1_ezhu1ccz)
-
-## What I did, and how (and why) it differs from my proposal
-
-I was able to deliver all of the functionality that I had originally proposed,
-with some additional features as well. The scene consists of a single triangle
-grid. The application turns the grid into a 3D terrain mesh by transforming each
-vertex's y-height according to a deterministic 2D Perlin noise algorithm. The
-noise algorithm produces a height map in real time that can be shifted across
-the mesh, producing an infinite-scrolling "terrain flyover" effect. I was also
-able to add several rendering/color themes to alter the final appearance of the
-mesh.
-
-This section details how I addressed each implementation concern from the
-proposal, and how my actual approach differed from my expected approach.
 
 ### Transformations (vertex buffer object/vertex shader)
 
@@ -196,11 +194,11 @@ float perlinMultiOctave(vec2 point, int octaves, float persistence)
 <p>
     <img
         src="images/3d-terrain-generator-tron.png"
-        width="250"
+        width="300"
     />
     <img
         src="images/3d-terrain-generator-synth.png"
-        width="250"
+        width="300"
     />
 </p>
 
@@ -251,11 +249,11 @@ for.
 <p float="left">
     <img
         src="images/3d-terrain-generator-dark.png"
-        width="250"
+        width="300"
     />  
     <img
         src="images/3d-terrain-generator-lighting.png"
-        width="250"
+        width="300"
     />
 </p>
 
@@ -264,12 +262,12 @@ my `gl_FragColor` vector (in the fragment shader) to help visualize the
 direction of each triangle's surface normal and detect any inconsistencies
 between vertices on each face. The XYZ coordinates of the normal vector map
 directly to RGB intensities, resulting in a unique "iridescent" effect where the
-colors shift as mesh and surface normals change orientation.
+colors shift as the mesh and surface normals change orientation.
 
 <p float="left">
     <img
         src="images/3d-terrain-generator-normal.png"
-        width="250"
+        width="300"
     />
 </p>
 
@@ -288,11 +286,11 @@ height of all three vertices in each triangle.
 <p float="left">
     <img
         src="images/3d-terrain-generator-heat.png"
-        width="250"
+        width="300"
     />
     <img
         src="images/3d-terrain-generator-earth.png"
-        width="250"
+        width="300"
     />
 </p>
 
