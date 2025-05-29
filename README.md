@@ -21,14 +21,14 @@ rendering/color themes to alter the final appearance of the mesh.
 This section details how I addressed each implementation concern from the
 proposal, and how my actual approach differed from my expected approach.
 
-<p float="left">
+<p float="left" align="center">
     <img
         src="images/3d-terrain-generator-color.png"
         width="600"
     />
 </p>
 
-<p float="left">
+<p float="left" align="center">
     <img
         src="images/3d-terrain-generator-wire.png"
         width="300"
@@ -191,7 +191,7 @@ float perlinMultiOctave(vec2 point, int octaves, float persistence)
 }
 ```
 
-<p>
+<p float="left" align="center">
     <img
         src="images/3d-terrain-generator-tron.png"
         width="300"
@@ -200,7 +200,7 @@ float perlinMultiOctave(vec2 point, int octaves, float persistence)
         src="images/3d-terrain-generator-synth.png"
         width="300"
     />
-</p>
+</p align="center">
 
 ### Lighting (geometry shader)
 
@@ -246,7 +246,7 @@ This ensured I was able to set the exact same surface normal vector for all
 three vertices, achieving the flat-shading, low-poly visual style I was going
 for.
 
-<p float="left">
+<p float="left" align="center">
     <img
         src="images/3d-terrain-generator-dark.png"
         width="300"
@@ -264,7 +264,7 @@ between vertices on each face. The XYZ coordinates of the normal vector map
 directly to RGB intensities, resulting in a unique "iridescent" effect where the
 colors shift as the mesh and surface normals change orientation.
 
-<p float="left">
+<p float="left" align="center">
     <img
         src="images/3d-terrain-generator-normal.png"
         width="300"
@@ -283,7 +283,7 @@ normal vector in place of an RGB color vector. The multi-colored themes (Earth
 and Heat Map) apply a fragment color based on the average model coordinate
 height of all three vertices in each triangle.
 
-<p float="left">
+<p float="left" align="center">
     <img
         src="images/3d-terrain-generator-heat.png"
         width="300"
